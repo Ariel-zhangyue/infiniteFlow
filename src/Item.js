@@ -28,7 +28,6 @@ export default class Item extends PureComponent {
       !ined &&
       node.getBoundingClientRect().right < window.screen.availWidth
     ) {
-
       ined = true
       onMovein && onMovein()
     }
@@ -58,11 +57,11 @@ export default class Item extends PureComponent {
     return (
       <div ref={this.ref} style={{
         position: 'absolute',
-        width: '150px',
+        width: 'fit-content',
         backgroundColor: 'red',
         flex: 'none',
         left: window.screen.availWidth,
-        display: 'inline-block',
+        // display: 'inline-block',
         transform: `translate(${translateX}px)`,
       }}>{this.props.item.item.text}</div>
     )

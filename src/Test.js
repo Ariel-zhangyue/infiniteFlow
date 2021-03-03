@@ -38,7 +38,6 @@ export default class extends PureComponent {
   onMovein = () => {
 
     const { displayQueue } = this.state
-    if (displayQueue.length > 6) return
     this.idx = (this.idx + 1) % this.data.length;
     displayQueue.push({
       key: Date.now(),
